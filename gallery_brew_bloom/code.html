@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery - Brew &amp; Bloom</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#4a4737",
+                      "secondary-container": "#e6e0c9",
+                      "on-primary-container": "#ae8d87",
+                      "on-tertiary-fixed": "#3b0800",
+                      "tertiary": "#360700",
+                      "on-primary-fixed-variant": "#5b403c",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#f1f1ec",
+                      "inverse-primary": "#e3beb8",
+                      "tertiary-fixed": "#ffdbd1",
+                      "surface-container": "#eeeee9",
+                      "on-surface-variant": "#504442",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#2f312e",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#fafaf5",
+                      "on-surface": "#1a1c19",
+                      "primary-fixed-dim": "#e3beb8",
+                      "surface-container-high": "#e8e8e3",
+                      "primary": "#271310",
+                      "secondary": "#625f4d",
+                      "surface-dim": "#dadad5",
+                      "outline-variant": "#d3c3c0",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#1a1c19",
+                      "outline": "#827472",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed": "#1e1c0e",
+                      "secondary-fixed": "#e9e2cc",
+                      "surface-container-highest": "#e3e3de",
+                      "primary-container": "#3e2723",
+                      "surface-container-low": "#f4f4ef",
+                      "tertiary-container": "#5a1200",
+                      "on-secondary-container": "#676351",
+                      "on-tertiary-fixed-variant": "#881f00",
+                      "tertiary-fixed-dim": "#ffb5a1",
+                      "secondary-fixed-dim": "#ccc6b1",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#745853",
+                      "surface": "#fafaf5",
+                      "surface-variant": "#e3e3de",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#2b1613",
+                      "primary-fixed": "#ffdad4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#fd6137",
+                      "background": "#fafaf5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1200px",
+                      "margin-desktop": "40px",
+                      "section-gap": "80px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "caption": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Montserrat"
+                      ],
+                      "label-md": [
+                              "Montserrat"
+                      ],
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { column-count: 3; }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+        .image-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .masonry-item:hover .image-overlay {
+            opacity: 1;
+        }
+        .masonry-item img {
+            transition: transform 0.5s ease;
+        }
+        .masonry-item:hover img {
+            transform: scale(1.05);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="w-full sticky top-0 z-50 bg-surface-container-low/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
+<a class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim tracking-tight" href="#">Brew &amp; Bloom</a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors cursor-pointer transition-all active:scale-95" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors cursor-pointer transition-all active:scale-95" href="#">Menu</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors cursor-pointer transition-all active:scale-95" href="#">About Us</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors cursor-pointer transition-all active:scale-95" href="#">Today's Special</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim border-b-2 border-on-tertiary-container pb-1 cursor-pointer transition-all active:scale-95" href="#">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors cursor-pointer transition-all active:scale-95" href="#">Contact</a>
+</div>
+<button class="hidden md:block bg-[#BF360C] text-white font-label-md text-label-md px-6 py-2 rounded font-bold hover:opacity-80 transition-opacity duration-300">Order Online</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap w-full">
+<header class="text-center mb-12">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Our Visual Story</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Immerse yourself in the world of slow living and artisanal craftsmanship. A curated collection of moments captured in our sanctuary.</p>
+</header>
+<!-- Gallery Grid -->
+<div class="masonry-grid">
+<!-- Item 1 -->
+<div class="masonry-item relative rounded-lg overflow-hidden cursor-pointer group">
+<img class="w-full h-auto object-cover rounded-lg" data-alt="A close-up, high-quality photograph of intricate latte art in a ceramic cup resting on a rustic wooden table. Warm, inviting natural light spilling in from a nearby window. Steam gently rising from the cup. Earthy tones of deep brown coffee and creamy white milk contrasting with the textured wood grain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLeRjIfEFCEvoKv_9l3FF-I3IQyzKASZkvy5n_3_g-KsSkgBiCKF-2TrbwLY_7YvBOgB0H6dq1E3GD61PHZRKObV-SNvK_AE6g0RZqZwy-cPL94TCdWyyg02OAxBZqsYdmgMnouQfa-2Ow94dGiKNhtc_sLS1KMFehw1UzELodVICefmHuC3F3SBf-Cz9vkaLrvojci_Z1gjQaG5bXwiI-7Q2xLmgkdEKC18T9ZQYmzKb5F4xAorUshA"/>
+<div class="image-overlay absolute inset-0 bg-primary/20 opacity-0 flex items-center justify-center rounded-lg backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="masonry-item relative rounded-lg overflow-hidden cursor-pointer group">
+<img class="w-full h-auto object-cover rounded-lg" data-alt="A wide interior shot of a modern artisanal cafe. Sunlight streams through large windows, illuminating lush green hanging plants and warm wooden furniture. A barista is carefully preparing coffee in the background. The aesthetic is tactile, minimalist, and serene, characterized by secondary beige walls and terracotta accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANwiS_AVkavtZ7KnsK23QuEny5tZ4nNukSk1PtyioT9wzsZDfi5Mingt_0z8pUnHMD-B_eBwBNkyr26RmGqhUTW4gkX-RsOgeoy-PcbDBbFK7Dc5ZWbAvzhPwNsVjsKwE7RRrZBDNGPW9IzBPAbeUBMcO4NbDAlA_iPlFQo6pmYWuIs2PQYLO566Yf_j6t-JzIhidPRPGW8MQur2o_X74bSIUnkVF_WUTr1duSHwTCATUo9_CK8j0_lA"/>
+<div class="image-overlay absolute inset-0 bg-primary/20 opacity-0 flex items-center justify-center rounded-lg backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="masonry-item relative rounded-lg overflow-hidden cursor-pointer group">
+<img class="w-full h-auto object-cover rounded-lg" data-alt="A high-end editorial style photograph of a perfectly layered espresso drink in a clear glass on a marble countertop. Beside it rests a small sprig of dried botanicals. The lighting is soft and diffused, creating a premium, slow-living atmosphere. Deep coffee tones contrast against the smooth surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0ZdTds9VRXnGYjOt1onYe7DVZkZ5sgQ-TDIYZxeabOrCW1Zj7DauPHQk4qgTilf7VSQj74Gl96jM5BCJWFQp_xhu6g_GjBqpxQOafalsYJb9qJHgsAWdIOsfQiAtM2SAf1e87CJ80tGr8lIu_6WKGJGdXZYZCJq-7fkcIxdOqq47M0KoQ8tng95f2xUw97XPn8JKs5hD8zPl0UfgcUFhYxAMON8DAWBiiYlgCZ3yUi2S93fZuMggVpQ"/>
+<div class="image-overlay absolute inset-0 bg-primary/20 opacity-0 flex items-center justify-center rounded-lg backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="masonry-item relative rounded-lg overflow-hidden cursor-pointer group">
+<img class="w-full h-auto object-cover rounded-lg" data-alt="A candid shot of two customers engaged in quiet conversation across a small cafe table. They are holding warm mugs. The background is softly out of focus (bokeh effect), highlighting the intimate, comfortable mood. Warm, earthy color palette with subtle sage green undertones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqsVtoR5PwMwzqbOXVwKMnryl7sf0gXE3QMdyqY_s5HBzfAuoUrVbKp6E6o8l7GTfih1cWOQT9BiRd-ERMMAr37JE6ytmhtyVHa5EpYLePUiXqOqsPK30aAHBiOYiqwERM2GTeNy0Ev-qhXOUBwF9mIwXBhTUFGlvlsgoaUSk7RADu_4WYH1qO7DWlA6_gGcmqLZc3_sN4IJieNSHzrrJeXahzZAZ3gOWnXOW_pgSzPlrzhNMoD0GSVw"/>
+<div class="image-overlay absolute inset-0 bg-primary/20 opacity-0 flex items-center justify-center rounded-lg backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="masonry-item relative rounded-lg overflow-hidden cursor-pointer group">
+<img class="w-full h-auto object-cover rounded-lg" data-alt="Close up of a barista's hands carefully pouring water from a gooseneck kettle over a pour-over coffee setup. The focus is on the craftsmanship and precision. Dark, moody lighting accentuating the steam and the rich texture of the ground coffee. Artisanal modernism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEcZ7flHxVkhAk4dkm-Ub79cdt8Kzhb46G5jhwvTQ9u8Ewa535f3DfrmPOnbM6ITmg58QT_KKdFqdBbuOcV37Qv5p7CP41F6yceUfR5iSEa4TMLKyFItKYY_hjQeY0vlWzBkYKq36bB0RhzjD672Pxi1vVxsR3E8qWFfh5dn8wi4X1vIu2JAq6Z8z5IgoeDVyGvk-enZxgtDBeR2lBqMdVHlCTTw5SK5U4AvyZeL5aSsqz3yB86lRcfQ"/>
+<div class="image-overlay absolute inset-0 bg-primary/20 opacity-0 flex items-center justify-center rounded-lg backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="masonry-item relative rounded-lg overflow-hidden cursor-pointer group">
+<img class="w-full h-auto object-cover rounded-lg" data-alt="A beautifully plated artisanal pastry on a minimalist ceramic plate, set against a secondary cream background. A delicate dusting of powdered sugar. The composition is asymmetrical, resembling a page from a lifestyle magazine. Soft, organic lighting emphasizing texture and quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHZZBTZZnmjLgEr5nP4z921WKVgm1upziCOg-KupoQ2GPqwJnUL1CQifxsYawAYr0xrf-aIHMuGnQZa-MlwzlSOo7PPWjb3WR5PSlP73VoVr5WDthvBEslaTU_o9ua5ePmSl-lPDQJYzToAZdJ3-vOjmN4yWdMDw2_zWAk9STqY_Kg8rhqe1VMZeZzm4ojRyYRVRVzpGvXSLgEU1fztIeC0YvpqTdCTxwY9vI3dpnT7dx-wuSuml64ag"/>
+<div class="image-overlay absolute inset-0 bg-primary/20 opacity-0 flex items-center justify-center rounded-lg backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+<!-- Item 7 -->
+<div class="masonry-item relative rounded-lg overflow-hidden cursor-pointer group">
+<img class="w-full h-auto object-cover rounded-lg" data-alt="A tranquil exterior view of the cafe storefront early in the morning. A beautifully designed A-frame sign rests on the sidewalk. Soft, diffused morning light bathes the scene. The aesthetic implies reliability, premium quality, and a welcoming botanical sanctuary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY8GduEiOy6sH76hc42MJgf19-Py-wXlseaoz2paPUnfQCGeGRk3iM-ERwZE27IJ5fQh1oFIInSw0eDMlq5RRvHBELssPusoB6R8ahMGDBjDdXzjrsUKdAY4BFGGNCfqIKMuXSbq5oRVsaeXFxxhkA9lUl85TkQgkvu5L24Op2TuSpUsNlhvzI_CrmtElT-6AdbLedJewyCM-fn-5XarbZlMS6Z7d92Gc2CvZbEZSDCcGjafO4GQrz7Q"/>
+<div class="image-overlay absolute inset-0 bg-primary/20 opacity-0 flex items-center justify-center rounded-lg backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-primary-container dark:bg-primary border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-desktop py-16">
+<div class="flex flex-col space-y-4">
+<span class="font-headline-md text-headline-md text-on-primary-container dark:text-primary-fixed">Brew &amp; Bloom</span>
+<span class="font-caption text-caption text-on-primary-container/80 dark:text-primary-fixed/80">© 2024 Brew &amp; Bloom. Crafted for slow living.</span>
+</div>
+<div class="flex flex-col space-y-2">
+<a class="font-label-md text-label-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">Sustainability</a>
+<a class="font-label-md text-label-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">Careers</a>
+</div>
+<div class="flex flex-col space-y-2">
+<a class="font-label-md text-label-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col space-y-2">
+<!-- Empty col for grid alignment as per shared component layout logic -->
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cafe Maktoob - Specialty Coffee Cafe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "secondary-container": "#fed3c7",
+                "on-secondary-fixed": "#2c160e",
+                "on-surface-variant": "#504440",
+                "tertiary-fixed": "#ffdbce",
+                "on-background": "#1a1c1a",
+                "outline-variant": "#d3c3be",
+                "surface-container-high": "#e9e8e5",
+                "froth-white": "#FDFCFB",
+                "surface": "#faf9f6",
+                "tertiary-fixed-dim": "#e4beb2",
+                "on-tertiary-fixed": "#2b160f",
+                "surface-dim": "#dbdad7",
+                "primary-fixed": "#ffdbce",
+                "surface-container-low": "#f4f3f1",
+                "surface-variant": "#e3e2e0",
+                "surface-container-highest": "#e3e2e0",
+                "on-primary": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "on-secondary-fixed-variant": "#5d4037",
+                "tertiary-container": "#2c1810",
+                "on-secondary-container": "#795950",
+                "on-tertiary-container": "#9e7e72",
+                "inverse-surface": "#2f312f",
+                "mahogany": "#4E342E",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed": "#2a170f",
+                "on-tertiary-fixed-variant": "#5b4137",
+                "error": "#ba1a1a",
+                "on-surface": "#1a1c1a",
+                "primary": "#090100",
+                "primary-fixed-dim": "#e3bfb2",
+                "error-container": "#ffdad6",
+                "on-primary-fixed-variant": "#5a4137",
+                "on-error": "#ffffff",
+                "latte-gold": "#C6A664",
+                "espresso": "#1A0F0A",
+                "on-error-container": "#93000a",
+                "secondary": "#77574d",
+                "secondary-fixed-dim": "#e7bdb1",
+                "on-primary-container": "#9e7e73",
+                "surface-tint": "#74584e",
+                "outline": "#827470",
+                "background": "#faf9f6",
+                "inverse-on-surface": "#f2f1ee",
+                "surface-bright": "#faf9f6",
+                "inverse-primary": "#e3bfb2",
+                "primary-container": "#2c1810",
+                "surface-container": "#efeeeb",
+                "secondary-fixed": "#ffdbd0",
+                "surface-container-lowest": "#ffffff",
+                "tertiary": "#090100"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-desktop": "64px",
+                "unit": "8px",
+                "gutter": "32px",
+                "max-width": "1280px",
+                "margin-mobile": "24px"
+        },
+        "fontFamily": {
+                "label-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-md": [
+                        "Playfair Display"
+                ],
+                "headline-xl": [
+                        "Playfair Display"
+                ],
+                "display-lg": [
+                        "Playfair Display"
+                ],
+                "display-lg-mobile": [
+                        "Playfair Display"
+                ],
+                "label-price": [
+                        "Hanken Grotesk"
+                ],
+                "body-lg": [
+                        "Hanken Grotesk"
+                ],
+                "body-md": [
+                        "Hanken Grotesk"
+                ]
+        },
+        "fontSize": {
+                "label-lg": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md": [
+                        "28px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-xl": [
+                        "40px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg": [
+                        "56px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "36px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-price": [
+                        "20px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.7",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+
+        /* Ambient depth shadows */
+        .shadow-ambient {
+            box-shadow: 0 16px 40px -12px rgba(44, 24, 16, 0.08);
+        }
+        
+        .shadow-hover {
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        
+        .shadow-hover:hover {
+            box-shadow: 0 24px 48px -12px rgba(44, 24, 16, 0.12);
+            transform: translateY(-4px);
+        }
+
+        /* Bloom reveal effect */
+        .bloom-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .bloom-reveal {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(254,211,199,0.2) 0%, rgba(250,249,246,0) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .bloom-card:hover .bloom-reveal {
+            opacity: 1;
+        }
+        .bloom-card img {
+            transition: transform 0.7s ease;
+        }
+        .bloom-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col pt-20 bg-surface-container-low">
+<!-- 1. TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 mx-auto bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300" id="topNav">
+<div class="max-w-max-width w-full mx-auto flex justify-between items-center">
+<a class="font-headline-md text-headline-md text-primary tracking-tight" href="#">Cafe Maktoob</a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-lg text-label-lg text-tertiary-container border-b-2 border-tertiary-container pb-1 hover:text-tertiary-container transition-colors duration-300" href="#home">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary-container transition-colors duration-300" href="#menu">Menu</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary-container transition-colors duration-300" href="#about">About Us</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary-container transition-colors duration-300" href="#special">Today's Special</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary-container transition-colors duration-300" href="#gallery">Gallery</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary-container transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="hidden md:block text-white font-label-lg text-label-lg px-6 py-3 rounded-lg hover:bg-tertiary-container transition-colors duration-300 scale-95 active:opacity-80 bg-tertiary">
+                Order Online
+            </button>
+<button aria-label="Menu" class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-20 pb-20">
+<!-- 2. Hero -->
+<section class="relative w-full rounded-xl overflow-hidden min-h-[80vh] flex items-center justify-center mt-6 shadow-ambient" id="home">
+<div class="absolute inset-0 bg-black/40 z-10"></div>
+<div class="absolute inset-0" data-alt="A warm, inviting specialty coffee roastery interior. Morning sunlight streaming through large industrial windows, illuminating a sleek espresso machine and wooden countertops. Soft steam rising from cups. Editorial photography style, high resolution, warm earthy tones, Artisanal Modernism aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuiDgOyljMmewBPWnaVIoim3p5YXl6Gv_-Ys8rz5U1gobcMH8aOQY0GhJJyJ4NcGyeQzxHacGHCLGYY3JdP1fRrl02j476ZyFwOo0Q8mV6thYuL3lGnOS7cV80ZvlgiR95eEms_JuMNAEdMg4D5yXIOqIc5z8QxNm0V8Pd7VwLbiC-myuncW0wQXm2am_4t_xhXoufPWgUJwRKKkkxK7uUpqhZDZwWzben_nO_6UjfqbY6RUj5J6ekOw')">
+<img alt="Cafe Interior" class="w-full h-full object-cover" data-alt="A warm, inviting specialty coffee roastery interior. Morning sunlight streaming through large industrial windows, illuminating a sleek espresso machine and wooden countertops. Soft steam rising from cups. Editorial photography style, high resolution, warm earthy tones, Artisanal Modernism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBmu50PRdM5TWmjEtfjQROf4o76XLO2AmfagElshohaEbSDeaV9FI6_etF_yajbogvGWL72fAm03uaOxcIR-47w4Uo3qUIlXedwIdSLBU0go_tlxR8L0pkFOUBKJ4tDF7YmywPfz_1NyclivFhK7tv136bV0ylrcKULmCdv6dIo8H7Mbw5tbferbTQY-ep0Je_TdC7_b7GTBraGxwH5rgvS880j-VGIHeZzB9ypWJCDVyCY6xwZ3bh-w"/>
+</div>
+<div class="relative z-20 text-center px-4 max-w-3xl mx-auto flex flex-col items-center gap-6">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-surface-container-lowest">
+                    Handcrafted Coffee,<br/>Made With Heart
+                </h1>
+<p class="font-body-lg text-body-lg text-surface-container-lowest/90 max-w-xl">
+                    Experience the art of slow living with our meticulously sourced, small-batch roasted coffees in a space designed for tranquility.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
+<button class="w-full sm:w-auto px-8 py-4 rounded border-2 border-surface-container-lowest text-surface-container-lowest font-label-lg text-label-lg hover:bg-surface-container-lowest hover:text-primary transition-colors duration-300 uppercase tracking-widest">
+                        View Menu
+                    </button>
+<button class="w-full sm:w-auto px-8 py-4 rounded text-white font-label-lg text-label-lg hover:bg-tertiary-container transition-colors duration-300 uppercase tracking-widest border-2 bg-tertiary border-tertiary">
+                        Order Now
+                    </button>
+</div>
+</div>
+</section>
+<!-- 3. Today's Special -->
+<section class="w-full" id="special">
+<div class="rounded-xl border border-secondary-container p-6 md:p-12 flex flex-col md:flex-row items-center gap-12 shadow-ambient bg-secondary-container">
+<div class="w-full md:w-1/2 order-2 md:order-1 flex flex-col items-start gap-6">
+<div class="inline-flex items-center gap-2 bg-latte-gold text-primary px-4 py-2 rounded-full font-label-lg text-label-lg uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+                        Today's Special ✨
+                    </div>
+<h2 class="font-headline-xl text-headline-xl text-primary">Maple Pecan Latte</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Embrace the season with our signature espresso blended with house-made maple syrup, toasted pecan bitters, and perfectly steamed oat milk. A cozy hug in a mug.
+                    </p>
+<div class="flex items-end gap-4">
+<span class="font-headline-md text-headline-md text-mahogany">₹550</span>
+<span class="font-body-md text-body-md text-on-surface-variant line-through mb-1">₹700</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant/70 italic flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                        Available till 6 PM
+                    </p>
+<button class="mt-4 px-8 py-3 rounded text-white font-label-lg text-label-lg hover:bg-tertiary-container transition-colors duration-300 uppercase tracking-widest shadow-hover bg-tertiary">
+                        Order This
+                    </button>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2 bloom-card rounded-xl overflow-hidden aspect-square md:aspect-[4/3] bg-surface-container border border-outline-variant/50">
+<div class="bloom-reveal"></div>
+<img alt="Maple Pecan Latte" class="w-full h-full object-cover" data-alt="A beautifully crafted Maple Pecan Latte in a ceramic mug, resting on a rustic wooden table. Latte art on top. Scattered pecans and a small jug of maple syrup nearby. Warm, inviting lighting, macro photography, Artisanal Modernism style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3bbserL4aQMeqDV1Sa_WBb7j3RJTahxwjr_EWq5liNwB9TN3EIQtSgDf4xORGxtv4mSHuo2uU0CMj9-VLMU2yT1M7pIIPs8ZWlTQn2790NxTkwleozZFlWZSGu9Dv_Qjq8wKt7sQaG97pEtHiQyzt8DdZ9ABu00ph2P5yxDeWYBQEs6r0vXqtup8XmVx_AoEA8PsyLr4pTX9R-i1JurvQgirldDUUVtMpkz8cKTRQ3C0tY0mI-LsSEw"/>
+</div>
+</div>
+</section>
+</main>
+<!-- 11. Footer -->
+<footer class="w-full bg-primary-container pt-20 pb-10">
+<div class="w-full px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter max-w-max-width mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-xl text-headline-xl text-on-primary">Cafe Maktoob</span>
+<p class="font-body-md text-body-md text-on-primary/80 max-w-xs">Crafted for slow living. Specializing in artisanal coffee and botanical comfort.</p>
+<div class="mt-2 text-on-primary/80">
+<p class="font-body-md text-body-md">garv@cafe.gmail.com</p>
+<p class="font-body-md text-body-md mt-1">45 Housing Board, Anand, Gujarat, near Amul Factory</p>
+</div>
+<p class="font-body-md text-sm text-on-primary/60 mt-4">© 2024 Cafe Maktoob. Crafted for slow living.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 md:gap-16">
+<div class="flex flex-col gap-3">
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Sustainability</a>
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Careers</a>
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary transition-colors opacity-90 hover:opacity-100" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple nav scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('topNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-ambient');
+            } else {
+                nav.classList.remove('shadow-ambient');
+            }
+        });
+    </script>
+</body></html>

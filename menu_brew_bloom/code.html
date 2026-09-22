@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Menu - Brew &amp; Bloom</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#4a4737",
+                      "secondary-container": "#e6e0c9",
+                      "on-primary-container": "#ae8d87",
+                      "on-tertiary-fixed": "#3b0800",
+                      "tertiary": "#360700",
+                      "on-primary-fixed-variant": "#5b403c",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#f1f1ec",
+                      "inverse-primary": "#e3beb8",
+                      "tertiary-fixed": "#ffdbd1",
+                      "surface-container": "#eeeee9",
+                      "on-surface-variant": "#504442",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#2f312e",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#fafaf5",
+                      "on-surface": "#1a1c19",
+                      "primary-fixed-dim": "#e3beb8",
+                      "surface-container-high": "#e8e8e3",
+                      "primary": "#271310",
+                      "secondary": "#625f4d",
+                      "surface-dim": "#dadad5",
+                      "outline-variant": "#d3c3c0",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#1a1c19",
+                      "outline": "#827472",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed": "#1e1c0e",
+                      "secondary-fixed": "#e9e2cc",
+                      "surface-container-highest": "#e3e3de",
+                      "primary-container": "#3e2723",
+                      "surface-container-low": "#f4f4ef",
+                      "tertiary-container": "#5a1200",
+                      "on-secondary-container": "#676351",
+                      "on-tertiary-fixed-variant": "#881f00",
+                      "tertiary-fixed-dim": "#ffb5a1",
+                      "secondary-fixed-dim": "#ccc6b1",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#745853",
+                      "surface": "#fafaf5",
+                      "surface-variant": "#e3e3de",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#2b1613",
+                      "primary-fixed": "#ffdad4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#fd6137",
+                      "background": "#fafaf5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1200px",
+                      "margin-desktop": "40px",
+                      "section-gap": "80px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "caption": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Montserrat"
+                      ],
+                      "label-md": [
+                              "Montserrat"
+                      ],
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .menu-card {
+            transition: all 0.4s ease;
+        }
+        .menu-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px -4px rgba(62, 39, 35, 0.08);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-surface-container-low/80 backdrop-blur-md shadow-sm dark:shadow-none bg-surface/90 dark:bg-surface-dim/90 text-primary dark:text-primary-fixed-dim">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
+<a class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim tracking-tight" href="#">Brew &amp; Bloom</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md cursor-pointer transition-all active:scale-95" href="#">Home</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-on-tertiary-container pb-1 font-label-md text-label-md cursor-pointer transition-all active:scale-95" href="#">Menu</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md cursor-pointer transition-all active:scale-95" href="#">About Us</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md cursor-pointer transition-all active:scale-95" href="#">Today's Special</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md cursor-pointer transition-all active:scale-95" href="#">Gallery</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md cursor-pointer transition-all active:scale-95" href="#">Contact</a>
+</nav>
+<button class="bg-[#BF360C] text-white font-label-md text-label-md px-6 py-2 rounded font-bold hover:opacity-80 transition-opacity duration-300 hidden md:block">Order Online</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full py-section-gap">
+<div class="text-center mb-16">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Our Menu</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Crafted with care, featuring locally sourced ingredients and single-origin beans. Experience the art of slow living with every bite and sip.</p>
+</div>
+<!-- Category: Coffee -->
+<section class="mb-section-gap">
+<h2 class="font-headline-md text-headline-md text-primary mb-8 border-b border-outline-variant pb-2">Coffee</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Item 1 -->
+<div class="menu-card bg-[#FFF8E1] rounded-xl overflow-hidden border border-outline-variant/30 flex flex-col h-full">
+<img class="w-full h-48 object-cover" data-alt="A perfect shot of a double espresso in a small ceramic cup resting on an artisanal wooden saucer. The rich crema is golden-brown. Soft morning light streams through a window, illuminating the cup against a textured, light beige background in a sophisticated, minimalist coffee shop setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq9vSjXBqCFDJxDNYHZBTMSFw3PxDCH-Lyedwwj6bHJGO_fav_3jirzn7asKC1swZUh_llbQYkJlhmuH_B9IDJwBOr-StROrCtph5g3yejHYAvBqsgs93v_Ta7-In8IB2DHpKhdrcXZlV_tilbGR1-HHhtXFwZ571NBpS88u69PJAqNoDhGiiivyn-kX0U2_K79w9Q8xdlk3-pBOpZH_ig4grWcxe5Stybio0LCN0mbmR4jCD6JI1wiw"/>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Espresso</h3>
+<span class="font-label-md text-label-md text-[#BF360C] whitespace-nowrap ml-4">$3.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">A concentrated double shot of our signature house blend, featuring notes of dark chocolate and toasted almond.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="menu-card bg-[#FFF8E1] rounded-xl overflow-hidden border border-outline-variant/30 flex flex-col h-full">
+<img class="w-full h-48 object-cover" data-alt="A beautifully poured latte in a wide ceramic mug, featuring intricate fern latte art on the surface. The mug sits on a clean, light-colored table next to a sprig of fresh eucalyptus. The aesthetic is bright, airy, and modern, reflecting a high-end artisanal cafe atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMe27DUgEL5JFX4qfInoH-Od_onTNhb0BlR5lXrKjhE8umY2JpS2Rc8ZdidamCLZBbJDaez60VheU3MVtEo506TYaWkB53Zc70LJIr5kLHAM540pkMfLaP5jgaiZEA8BXxBnm5HZyIBrsvvkxVc3upbRF6WNYh2xWi5JEjPIcptwV4M4xVHVKQTvKq3YkFCk8l-elSZS8xvemRwYOw3odsptvshKg6V9fphy9Q29QlfKRbEtcqElXlTg"/>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Latte</h3>
+<span class="font-label-md text-label-md text-[#BF360C] whitespace-nowrap ml-4">$4.75</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Silky steamed milk poured over rich espresso, creating a smooth, balanced texture with delicate latte art.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="menu-card bg-[#FFF8E1] rounded-xl overflow-hidden border border-outline-variant/30 flex flex-col h-full">
+<img class="w-full h-48 object-cover" data-alt="A classic cappuccino in a sturdy white cup, showcasing a deep ring of crema surrounding a perfect circle of dense, glossy microfoam. A dusting of cocoa powder sits lightly on top. The background is a soft, out-of-focus cafe interior with warm natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3uHKc_5h8YV8sjXyvtaKEHvoeYWKWPxGJCwwjv5a5W_d5yPajfIfrnq8awAfW0Ruc7-PAVR-OhuQ-3xJw35EeZMjkWoD7IBSCx1JFkXwjQcSm-HVrCNfyNjIcRiwO51NeW8O91nvMU8T_I2O4-N5G-VDK9o80ZPLUeRFG9CVmrWuxk0BqqZ7EvDPMXNhx0HxheRAg78u-jlAmpSgQvRy-0XYa_Dfda2guiOinEHAdbco281njXHcAwA"/>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Cappuccino</h3>
+<span class="font-label-md text-label-md text-[#BF360C] whitespace-nowrap ml-4">$4.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Equal parts espresso, steamed milk, and dense microfoam, offering a robust coffee flavor and luxurious mouthfeel.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Cold Brews -->
+<section class="mb-section-gap">
+<h2 class="font-headline-md text-headline-md text-primary mb-8 border-b border-outline-variant pb-2">Cold Brews</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Item 1 -->
+<div class="menu-card bg-[#FFF8E1] rounded-xl overflow-hidden border border-outline-variant/30 flex flex-col h-full">
+<img class="w-full h-48 object-cover" data-alt="A tall glass of cold brew coffee filled with large ice cubes. The dark amber liquid catches the light beautifully. Condensation forms on the outside of the glass. The setting is minimal and bright, evoking a refreshing summer morning in a botanical-themed cafe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD__0g7UAGbensXK5ZpPCV2QQWnEvhwTnnW0QXg7HjkQOqP8WMKJJ-6K3hFGbHuiFux6tzC0Ec2_LyPorDPwHjH09Jv4Px-MkBFWqmdnSgcG3ykhg-kGkHR4EvudIjAF706KTGhPLbCPi2Fm9DBBYizeAH9wEZcesDtT223Hvvoyqe-zqppUc2AHm-zijP9NOV1GnSlQy9RUUA8Ik_LfXHyx_6DEyryiLxLarBvYBrNb2xpYasVOr5uTQ"/>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Classic Cold Brew</h3>
+<span class="font-label-md text-label-md text-[#BF360C] whitespace-nowrap ml-4">$5.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Steeped for 18 hours to extract a remarkably smooth, low-acidity profile with subtle fruity undertones.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="menu-card bg-[#FFF8E1] rounded-xl overflow-hidden border border-outline-variant/30 flex flex-col h-full">
+<img class="w-full h-48 object-cover" data-alt="A stunning visual of nitro cold brew cascading in a clear pint glass, showing the mesmerizing nitrogen bubble effect settling from a creamy white head down to deep black coffee. The aesthetic is modern, clean, and highlights the premium texture of the drink." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwS3Mno5-p9i6Lm1SV_Ds7JVt6qiBD15zOq5-mj1DPSGoWpcbqj1i3loLbsrsFgzPddlHfiXkWYTQjw2gEOjtDipGByV7UV4nVWlmCdn6K_JByx1DFVv8Etim5hcNdm8MfrDKSkiws-CIgOzMrabl6lGn9xmAC7kf1hYbQuuD0TqdgxbSW-1A9Qw0bAnhsframRqeICR_n5ryXBOiqrqodSyhn7R-fg4AsOFg8ejwRrGsAP0ACWWrMAA"/>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Nitro Cold Brew</h3>
+<span class="font-label-md text-label-md text-[#BF360C] whitespace-nowrap ml-4">$6.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Infused with nitrogen for a velvety, creamy texture and a cascading visual effect. Served chilled without ice.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Pastries -->
+<section class="mb-section-gap">
+<h2 class="font-headline-md text-headline-md text-primary mb-8 border-b border-outline-variant pb-2">Pastries</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Item 1 -->
+<div class="menu-card bg-[#FFF8E1] rounded-xl overflow-hidden border border-outline-variant/30 flex flex-col h-full">
+<img class="w-full h-48 object-cover" data-alt="A freshly baked, golden-brown butter croissant with visible flaky layers resting on a simple, earthy ceramic plate. Crumbly bits surround it slightly, indicating its crispness. The lighting is soft and natural, emphasizing the artisanal, high-quality baking." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiI4vNgFuzW-bpMmLEZz33vYRjEaDWNpCfprF4R3mDXnuoCSOHyLHsLqRt2V_U38_uXk3Heg9Xskzh0mwzIcMEt1exat9kvNWKm4XOimHlWWB2Qxix9qexYN8V_9UgD5X9iVVDXkPNTnW01rQ6MAYnILLfCZjSml8_W4lLtvGuk5STJErqXVybtSq1IT1lUUH5qB94KYQAJVqCyzIbDB2dS1D0l2XGKR_kODCaZGZAhEJLU-JnbHfu7g"/>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Butter Croissant</h3>
+<span class="font-label-md text-label-md text-[#BF360C] whitespace-nowrap ml-4">$4.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">A classic French pastry, baked fresh daily. Incredibly flaky on the outside with a soft, buttery honeycomb interior.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="menu-card bg-[#FFF8E1] rounded-xl overflow-hidden border border-outline-variant/30 flex flex-col h-full">
+<img class="w-full h-48 object-cover" data-alt="A large, rustic blueberry muffin with a generous crumb topping, sitting on a textured linen napkin. Plump blueberries are visible bursting through the golden crust. The scene feels cozy, organic, and inviting, shot in a bright, modern light-mode style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArGF3RVhrJA7C_fFl_5zc8NyI2ix9lDkCctC8l4tSWbxGyWFGgwfJ2WwRGBP1MDI_DdSfl-Vd-QSM61v36CMahaTSGuelzUmQ74ks3OnQZrXMBOLyEZ7GIOvtY69XCCQnOFrdLZ7Kaogdsi79_IVV3LEEDlxBqQubXbRDK5cdw0_yuOisUXCXeGDPu2zHtzFTyAT8_rUIUAMuJMMxTtmdQGgqEZ3crEKvoWG25fk4aSFcP5PNtSQNXpw"/>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Blueberry Muffin</h3>
+<span class="font-label-md text-label-md text-[#BF360C] whitespace-nowrap ml-4">$3.75</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Bursting with wild blueberries and topped with a delicate streusel crumb for a perfect textural contrast.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Breakfast -->
+<section class="mb-section-gap">
+<h2 class="font-headline-md text-headline-md text-primary mb-8 border-b border-outline-variant pb-2">Breakfast</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Item 1 -->
+<div class="menu-card bg-[#FFF8E1] rounded-xl overflow-hidden border border-outline-variant/30 flex flex-col h-full">
+<img class="w-full h-48 object-cover" data-alt="A beautiful slice of artisanal sourdough toast generously topped with mashed avocado, a perfectly poached egg sliced open to reveal a runny yolk, and a sprinkle of microgreens and red pepper flakes. The food styling is top-tier, set against a minimalist, bright aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcoP36Ai0T7TtXpmMM0OHhE0xSeY0YrUJgx4-4PFRnvpUQjlFQG8w1-AcqqupUdZhx7usC6hHqQad4cgLsGQPGUQR1wHDv80-glMAvfhoOiolm_r5KpMBojv7hqLAfRY38c1GqLG8Ej_5-TmUpctt0wir99U55Zi0Xm1VMf60uM6_ZpEz_Jc0QtOFo_LyGgMM6mmDpW0g4Dx_voiU-nmIVy_32ZhRvSs_PZhVnI5be0194sJwR5AIImw"/>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Avocado Toast</h3>
+<span class="font-label-md text-label-md text-[#BF360C] whitespace-nowrap ml-4">$12.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Smashed Hass avocado on thick-cut toasted sourdough, finished with micro cilantro, olive oil, and a sprinkle of sea salt.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="menu-card bg-[#FFF8E1] rounded-xl overflow-hidden border border-outline-variant/30 flex flex-col h-full">
+<img class="w-full h-48 object-cover" data-alt="A high-angle shot of a deep-dish quiche lorraine slice, showing a flaky, golden crust and a rich, creamy egg custard filling studded with gruyere and bacon. Served alongside a small, vibrant side salad of mixed baby greens. The setting is refined and elegant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC00jPA6TF66VyTSuFgzWsvc9qflPGsTb4vDfp7VyT3otz9qZawk-Odtc1ziNHKhEg1GDfTgdFWiLJ6tNlLsReMLaYVuOFbdDD64YWR-8nLwY7wT1gZI0UToCUkCcLQ52eXI3FO8_D14g4Z_i-phF_PjlEQZZaJB-LHBMrmmaDP1YfWflYO8zzBNP7a4gvjxyiomydzZgxImmlyeI6doPtBv7RcxVbkJZtV5wSwUB3ze9nVVOAiTbxIpQ"/>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Savory Quiche</h3>
+<span class="font-label-md text-label-md text-[#BF360C] whitespace-nowrap ml-4">$9.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">A rich, creamy egg custard baked in a buttery crust with gruyere cheese, spinach, and caramelized onions. Served warm.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Order Online Banner -->
+<section class="bg-[#FFF8E1] rounded-xl p-8 md:p-16 text-center border border-outline-variant/30 mb-section-gap relative overflow-hidden">
+<!-- Subtle decorative background element -->
+<div class="absolute -right-20 -top-20 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined" style="font-size: 300px; font-variation-settings: 'FILL' 1;">local_florist</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-4 relative z-10">Bring Brew &amp; Bloom Home</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl mx-auto relative z-10">Skip the line and order your favorites ahead of time. Pick up in-store or choose contactless delivery.</p>
+<button class="bg-[#BF360C] text-white font-label-md text-label-md px-8 py-4 rounded font-bold hover:opacity-80 transition-opacity duration-300 relative z-10">Order Online Now</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-primary-container dark:bg-primary border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-desktop py-16">
+<div class="md:col-span-1">
+<p class="font-headline-md text-headline-md text-on-primary-container dark:text-primary-fixed mb-4">Brew &amp; Bloom</p>
+<p class="font-caption text-caption text-on-primary-container/80 dark:text-primary-fixed/80">© 2024 Brew &amp; Bloom. Crafted for slow living.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-md text-label-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">Sustainability</a>
+<a class="font-label-md text-label-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-md text-label-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>

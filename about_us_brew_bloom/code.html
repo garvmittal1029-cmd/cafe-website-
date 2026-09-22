@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Brew &amp; Bloom</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#4a4737",
+                        "secondary-container": "#e6e0c9",
+                        "on-primary-container": "#ae8d87",
+                        "on-tertiary-fixed": "#3b0800",
+                        "tertiary": "#360700",
+                        "on-primary-fixed-variant": "#5b403c",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f1f1ec",
+                        "inverse-primary": "#e3beb8",
+                        "tertiary-fixed": "#ffdbd1",
+                        "surface-container": "#eeeee9",
+                        "on-surface-variant": "#504442",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2f312e",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fafaf5",
+                        "on-surface": "#1a1c19",
+                        "primary-fixed-dim": "#e3beb8",
+                        "surface-container-high": "#e8e8e3",
+                        "primary": "#271310",
+                        "secondary": "#625f4d",
+                        "surface-dim": "#dadad5",
+                        "outline-variant": "#d3c3c0",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1a1c19",
+                        "outline": "#827472",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#1e1c0e",
+                        "secondary-fixed": "#e9e2cc",
+                        "surface-container-highest": "#e3e3de",
+                        "primary-container": "#3e2723",
+                        "surface-container-low": "#f4f4ef",
+                        "tertiary-container": "#5a1200",
+                        "on-secondary-container": "#676351",
+                        "on-tertiary-fixed-variant": "#881f00",
+                        "tertiary-fixed-dim": "#ffb5a1",
+                        "secondary-fixed-dim": "#ccc6b1",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#745853",
+                        "surface": "#fafaf5",
+                        "surface-variant": "#e3e3de",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#2b1613",
+                        "primary-fixed": "#ffdad4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fd6137",
+                        "background": "#fafaf5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "margin-desktop": "40px",
+                        "section-gap": "80px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "caption": ["Montserrat"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="w-full sticky top-0 z-50 bg-surface/90 dark:bg-surface-dim/90 bg-surface-container-low/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-300" id="main-header">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4">
+<a class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim tracking-tight cursor-pointer transition-all active:scale-95 hover:opacity-80 duration-300" href="#">
+                Brew &amp; Bloom
+            </a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 duration-300 cursor-pointer active:scale-95" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 duration-300 cursor-pointer active:scale-95" href="#">Menu</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim border-b-2 border-on-tertiary-container pb-1 hover:opacity-80 transition-opacity duration-300 cursor-pointer active:scale-95" href="#">About Us</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 duration-300 cursor-pointer active:scale-95" href="#">Today's Special</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 duration-300 cursor-pointer active:scale-95" href="#">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 duration-300 cursor-pointer active:scale-95" href="#">Contact</a>
+</div>
+<button class="hidden md:inline-flex bg-tertiary-container text-on-tertiary font-label-md text-label-md px-6 py-2 rounded-full hover:opacity-90 transition-all active:scale-95">
+                Order Online
+            </button>
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[614px] flex items-center justify-center pt-24 pb-16 px-margin-mobile md:px-margin-desktop bg-surface-container overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 opacity-40 mix-blend-multiply" data-alt="A warm, cinematic wide shot of an artisanal coffee roastery. The space is filled with soft, natural morning light filtering through large industrial windows, highlighting the steam rising from a vintage roasting machine. Bags of raw coffee beans and rustic wooden shelves create a rich, tactile atmosphere. Colors are warm browns, terracottas, and soft beiges. Artisanal modernism style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQ3trIrROqrDzv6__SfY63UPW3jXEbgd_DNjOB-LPizdBuPx5S6r5IKG2CrxMPqm7YUKPyLpCRSK4GT2155vUtYllnRjJV-aFKPk-PQc7ePmq-wgo4D72v3H_ZF06QRevpclLkPUvdEbXywaPYMvv-hvWErfnaXWxX4YQhZlvsQhx4wRK67OZxjnb4PIKtvDOB3hoTUNAnw7ps6MAlK9mcRDQdcVzHwvkHz-waBYOc90dZ_rVufq9rHQ')">
+</div>
+<!-- Content -->
+<div class="relative z-10 max-w-container-max mx-auto text-center flex flex-col items-center">
+<span class="font-caption text-caption text-primary tracking-widest uppercase mb-4 opacity-80">Our Story</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6 max-w-4xl">
+                     Cultivating connection through exceptional coffee and botanical warmth.
+                 </h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                     Brew &amp; Bloom began as a simple idea: that the deliberate pace of a well-crafted morning routine can transform the day. We are roasters, bakers, and curators of slow living.
+                 </p>
+</div>
+</section>
+<!-- The Founder's Story (Asymmetric Layout) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1 mt-8 md:mt-0">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">The Journey to the Perfect Cup</h2>
+<p class="font-body-md text-on-surface-variant mb-6">
+                        Founder Elena Rostova spent a decade exploring the world's most remote coffee farms before settling down to build a sanctuary for slow living. Her vision was never just about the bean—it was about the hands that harvested it, the soil that nurtured it, and the moment it brings comfort to someone's day.
+                    </p>
+<p class="font-body-md text-on-surface-variant mb-8">
+                        Combining her expertise in specialty roasting with her passion for artisanal, botanical-infused baking, Brew &amp; Bloom was born as a physical manifestation of mindfulness and quality craftsmanship.
+                    </p>
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-full object-cover border border-outline-variant/30" data-alt="A close-up portrait of the female founder of a coffee shop, looking thoughtful and warm. She is in a softly lit cafe environment with natural tones, wearing a minimal, artisanal apron. The lighting highlights the texture of the fabric and the warm, inviting atmosphere. Artisanal modernism style, soft focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJlsnTc4eM5c_8eKiQtfSG1Rizi83oZZDosOxibgGNK8lGkngtaOHPLP9-DB70_xeQuOlVT_8YOu1tdwwr8iPelmjVZ-C0GXoRK8r1RAEXfrxjLKiZfgfxMaUeDM3iNt8PBM-NjXwwLmLXEB3jYEML6DBioawJwDZ8-lEMUf6g5b8xKSfwgDUGBg7yyRl63iyTBTb9PvSTaTEhSiZ-dYUWHC6L-I4gRv16-R-cuTQK8bWfv0Kh-CJLEA"/>
+<div>
+<p class="font-label-md text-label-md text-primary">Elena Rostova</p>
+<p class="font-caption text-caption text-on-surface-variant">Founder &amp; Master Roaster</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 order-1 md:order-2 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="A beautifully styled flat lay or environmental shot showing hands carefully pouring water from a copper gooseneck kettle over a ceramic pour-over coffee setup. Surrounding the coffee are scattered coffee beans, a small vase with dried botanicals, and a rustic wooden table surface. Warm, natural side-lighting. Artisanal modernism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCURFikc4yfws-7-rZ3H4CCJgSPjzjZ6xwAYPWM5wRXFX05PbDks1hluvwPu1ggeVCgK8kQQzTxc92DcvcuPrN4rm9LeRXUsJOILecNNoVBqSHalg_OiVwbsmfC0WRHPGhTHT7gvsl9w6K4TKqFR8YmJ3iZuPDdUDhEMSm_JPjf33Fdao3HJMOJp8NwxR944qQFcx_yXy4BtCi7cb5F3eQKn3T-yu_zzkf4uYPx8mWsKU0kjgr56Nto8g"/>
+</div>
+<!-- Decorative element reflecting the 'Bloom' aspect -->
+<div class="absolute -bottom-12 -left-12 w-32 h-32 bg-secondary-fixed rounded-full opacity-50 blur-3xl z-[-1]"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-primary-container dark:bg-primary border-t border-outline-variant/20 transition-all duration-300">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
+<div class="col-span-1 md:col-span-2">
+<a class="font-headline-md text-headline-md text-on-primary-container dark:text-primary-fixed mb-4 inline-block hover:text-tertiary-fixed transition-colors duration-200" href="#">
+                    Brew &amp; Bloom
+                </a>
+<p class="font-body-md text-body-md text-on-primary-container/80 dark:text-primary-fixed/80 max-w-xs mt-4">
+                    Crafting moments of pause through specialty coffee and botanical bakes.
+                </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md text-on-primary-container dark:text-primary-fixed mb-4 uppercase tracking-wider">Explore</h4>
+<ul class="space-y-3">
+<li>
+<a class="font-body-md text-body-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">
+                                Sustainability
+                            </a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">
+                                Careers
+                            </a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">
+                                Privacy Policy
+                            </a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">
+                                Terms of Service
+                            </a>
+</li>
+</ul>
+</div>
+<div class="col-span-1 flex flex-col justify-end mt-8 md:mt-0">
+<p class="font-caption text-caption text-on-primary-container/80 dark:text-primary-fixed/80">
+                    © 2024 Brew &amp; Bloom. Crafted for slow living.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple script for header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

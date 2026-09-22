@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Cafe Maktoob</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "secondary-container": "#fed3c7",
+                "on-secondary-fixed": "#2c160e",
+                "on-surface-variant": "#504440",
+                "tertiary-fixed": "#ffdbce",
+                "on-background": "#1a1c1a",
+                "outline-variant": "#d3c3be",
+                "surface-container-high": "#e9e8e5",
+                "froth-white": "#FDFCFB",
+                "surface": "#faf9f6",
+                "tertiary-fixed-dim": "#e4beb2",
+                "on-tertiary-fixed": "#2b160f",
+                "surface-dim": "#dbdad7",
+                "primary-fixed": "#ffdbce",
+                "surface-container-low": "#f4f3f1",
+                "surface-variant": "#e3e2e0",
+                "surface-container-highest": "#e3e2e0",
+                "on-primary": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "on-secondary-fixed-variant": "#5d4037",
+                "tertiary-container": "#2c1810",
+                "on-secondary-container": "#795950",
+                "on-tertiary-container": "#9e7e72",
+                "inverse-surface": "#2f312f",
+                "mahogany": "#4E342E",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed": "#2a170f",
+                "on-tertiary-fixed-variant": "#5b4137",
+                "error": "#ba1a1a",
+                "on-surface": "#1a1c1a",
+                "primary": "#090100",
+                "primary-fixed-dim": "#e3bfb2",
+                "error-container": "#ffdad6",
+                "on-primary-fixed-variant": "#5a4137",
+                "on-error": "#ffffff",
+                "latte-gold": "#C6A664",
+                "espresso": "#1A0F0A",
+                "on-error-container": "#93000a",
+                "secondary": "#77574d",
+                "secondary-fixed-dim": "#e7bdb1",
+                "on-primary-container": "#9e7e73",
+                "surface-tint": "#74584e",
+                "outline": "#827470",
+                "background": "#faf9f6",
+                "inverse-on-surface": "#f2f1ee",
+                "surface-bright": "#faf9f6",
+                "inverse-primary": "#e3bfb2",
+                "primary-container": "#2c1810",
+                "surface-container": "#efeeeb",
+                "secondary-fixed": "#ffdbd0",
+                "surface-container-lowest": "#ffffff",
+                "tertiary": "#090100"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-desktop": "64px",
+                "unit": "8px",
+                "gutter": "32px",
+                "max-width": "1280px",
+                "margin-mobile": "24px"
+        },
+        "fontFamily": {
+                "label-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-md": [
+                        "Playfair Display"
+                ],
+                "headline-xl": [
+                        "Playfair Display"
+                ],
+                "display-lg": [
+                        "Playfair Display"
+                ],
+                "display-lg-mobile": [
+                        "Playfair Display"
+                ],
+                "label-price": [
+                        "Hanken Grotesk"
+                ],
+                "body-lg": [
+                        "Hanken Grotesk"
+                ],
+                "body-md": [
+                        "Hanken Grotesk"
+                ]
+        },
+        "fontSize": {
+                "label-lg": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md": [
+                        "28px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-xl": [
+                        "40px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg": [
+                        "56px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "36px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-price": [
+                        "20px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.7",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="w-full sticky top-0 z-50 bg-surface/90 dark:bg-surface-dim/90 bg-surface-container-low/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-300" id="main-header">
+<nav class="flex justify-between items-center max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-4">
+<a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight cursor-pointer transition-all active:scale-95 hover:opacity-80 duration-300" href="#">
+                Cafe Maktoob
+            </a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 duration-300 cursor-pointer active:scale-95" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 duration-300 cursor-pointer active:scale-95" href="#">Menu</a>
+<a class="font-label-lg text-label-lg text-primary dark:text-primary-fixed-dim border-b-2 border-on-tertiary-container pb-1 hover:opacity-80 transition-opacity duration-300 cursor-pointer active:scale-95" href="#">About Us</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 duration-300 cursor-pointer active:scale-95" href="#">Today's Special</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 duration-300 cursor-pointer active:scale-95" href="#">Gallery</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 duration-300 cursor-pointer active:scale-95" href="#">Contact</a>
+</div>
+<button class="hidden md:inline-flex bg-tertiary-container text-on-tertiary font-label-lg text-label-lg px-6 py-2 rounded-full hover:opacity-90 transition-all active:scale-95">
+                Order Online
+            </button>
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[614px] flex items-center justify-center pt-24 pb-16 px-margin-mobile md:px-margin-desktop bg-surface-container overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 opacity-40 mix-blend-multiply" data-alt="A warm, cinematic wide shot of an artisanal coffee roastery. The space is filled with soft, natural morning light filtering through large industrial windows, highlighting the steam rising from a vintage roasting machine. Bags of raw coffee beans and rustic wooden shelves create a rich, tactile atmosphere. Colors are warm browns, terracottas, and soft beiges. Artisanal modernism style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQ3trIrROqrDzv6__SfY63UPW3jXEbgd_DNjOB-LPizdBuPx5S6r5IKG2CrxMPqm7YUKPyLpCRSK4GT2155vUtYllnRjJV-aFKPk-PQc7ePmq-wgo4D72v3H_ZF06QRevpclLkPUvdEbXywaPYMvv-hvWErfnaXWxX4YQhZlvsQhx4wRK67OZxjnb4PIKtvDOB3hoTUNAnw7ps6MAlK9mcRDQdcVzHwvkHz-waBYOc90dZ_rVufq9rHQ')">
+</div>
+<!-- Content -->
+<div class="relative z-10 max-w-max-width mx-auto text-center flex flex-col items-center">
+<span class="font-label-lg text-label-lg text-primary tracking-widest uppercase mb-4 opacity-80">Our Story</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6 max-w-4xl">
+                     Cultivating connection through exceptional coffee and botanical warmth.
+                 </h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                     Cafe Maktoob began as a simple idea: that the deliberate pace of a well-crafted morning routine can transform the day. We are roasters, bakers, and curators of slow living.
+                 </p>
+</div>
+</section>
+<!-- The Founder's Story (Asymmetric Layout) -->
+<section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1 mt-8 md:mt-0">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">The Journey to the Perfect Cup</h2>
+<p class="font-body-md text-on-surface-variant mb-6">
+                        Founder Elena Rostova spent a decade exploring the world's most remote coffee farms before settling down to build a sanctuary for slow living. Her vision was never just about the bean—it was about the hands that harvested it, the soil that nurtured it, and the moment it brings comfort to someone's day.
+                    </p>
+<p class="font-body-md text-on-surface-variant mb-8">
+                        Combining her expertise in specialty roasting with her passion for artisanal, botanical-infused baking, Cafe Maktoob was born as a physical manifestation of mindfulness and quality craftsmanship.
+                    </p>
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-full object-cover border border-outline-variant/30" data-alt="A close-up portrait of the female founder of a coffee shop, looking thoughtful and warm. She is in a softly lit cafe environment with natural tones, wearing a minimal, artisanal apron. The lighting highlights the texture of the fabric and the warm, inviting atmosphere. Artisanal modernism style, soft focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJlsnTc4eM5c_8eKiQtfSG1Rizi83oZZDosOxibgGNK8lGkngtaOHPLP9-DB70_xeQuOlVT_8YOu1tdwwr8iPelmjVZ-C0GXoRK8r1RAEXfrxjLKiZfgfxMaUeDM3iNt8PBM-NjXwwLmLXEB3jYEML6DBioawJwDZ8-lEMUf6g5b8xKSfwgDUGBg7yyRl63iyTBTb9PvSTaTEhSiZ-dYUWHC6L-I4gRv16-R-cuTQK8bWfv0Kh-CJLEA"/>
+<div>
+<p class="font-label-lg text-label-lg text-primary">Elena Rostova</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Founder &amp; Master Roaster</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 order-1 md:order-2 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="A beautifully styled flat lay or environmental shot showing hands carefully pouring water from a copper gooseneck kettle over a ceramic pour-over coffee setup. Surrounding the coffee are scattered coffee beans, a small vase with dried botanicals, and a rustic wooden table surface. Warm, natural side-lighting. Artisanal modernism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCURFikc4yfws-7-rZ3H4CCJgSPjzjZ6xwAYPWM5wRXFX05PbDks1hluvwPu1ggeVCgK8kQQzTxc92DcvcuPrN4rm9LeRXUsJOILecNNoVBqSHalg_OiVwbsmfC0WRHPGhTHT7gvsl9w6K4TKqFR8YmJ3iZuPDdUDhEMSm_JPjf33Fdao3HJMOJp8NwxR944qQFcx_yXy4BtCi7cb5F3eQKn3T-yu_zzkf4uYPx8mWsKU0kjgr56Nto8g"/>
+</div>
+<!-- Decorative element reflecting the 'Bloom' aspect -->
+<div class="absolute -bottom-12 -left-12 w-32 h-32 bg-secondary-fixed rounded-full opacity-50 blur-3xl z-[-1]"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-16 bg-primary-container dark:bg-primary border-t border-outline-variant/20 transition-all duration-300">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-16">
+<div class="col-span-1 md:col-span-2">
+<a class="font-headline-md text-headline-md text-on-primary-container dark:text-primary-fixed mb-4 inline-block hover:text-tertiary-fixed transition-colors duration-200" href="#">
+                    Cafe Maktoob
+                </a>
+<p class="font-body-md text-body-md text-on-primary-container/80 dark:text-primary-fixed/80 max-w-xs mt-4">
+                    Crafting moments of pause through specialty coffee and botanical bakes.
+                </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-lg text-label-lg text-on-primary-container dark:text-primary-fixed mb-4 uppercase tracking-wider">Explore</h4>
+<ul class="space-y-3">
+<li>
+<a class="font-body-md text-body-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">
+                                Sustainability
+                            </a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">
+                                Careers
+                            </a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">
+                                Privacy Policy
+                            </a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-primary-container/80 dark:text-primary-fixed/80 hover:text-tertiary-fixed transition-colors duration-200" href="#">
+                                Terms of Service
+                            </a>
+</li>
+</ul>
+</div>
+<div class="col-span-1 flex flex-col justify-end mt-8 md:mt-0">
+<p class="font-body-md text-body-md text-on-primary-container/80 dark:text-primary-fixed/80">
+                    © 2024 Cafe Maktoob. Crafted for slow living.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple script for header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>
