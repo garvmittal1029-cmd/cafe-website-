@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 /**
  * Fetch menu items from the API.
@@ -8,7 +8,15 @@ export async function fetchMenu() {
     const res = await fetch(`${API_URL}/menu`);
     if (!res.ok) throw new Error('Failed to fetch menu');
     const data = await res.json();
-    return data.items;
+    const rawList = Array.isArray(data) ? data : (data?.items || []);
+    if (rawList.length === 0) return null;
+    return rawList.map((item) => ({
+      name: item.name,
+      description: item.description || item.desc || '',
+      price: typeof item.price === 'number' ? item.price : (parseFloat(String(item.price).replace(/[^0-9.]/g, '')) || 0),
+      category: item.category,
+      image_url: item.image_url || item.image || item.url || '',
+    }));
   } catch (err) {
     console.warn('API unavailable, using fallback data:', err.message);
     return null;
@@ -23,7 +31,15 @@ export async function fetchTodaysSpecial() {
     const res = await fetch(`${API_URL}/todays-special`);
     if (!res.ok) throw new Error('Failed to fetch specials');
     const data = await res.json();
-    return data.specials;
+    const rawList = Array.isArray(data) ? data : (data?.specials || []);
+    if (rawList.length === 0) return null;
+    return rawList.map((item) => ({
+      name: item.name,
+      description: item.description || item.desc || '',
+      price: typeof item.price === 'number' ? item.price : (parseFloat(String(item.price).replace(/[^0-9.]/g, '')) || 0),
+      available_until: item.available_until || '6 PM',
+      image_url: item.image_url || item.image || item.url || '',
+    }));
   } catch (err) {
     console.warn('API unavailable, using fallback data:', err.message);
     return null;
@@ -38,7 +54,13 @@ export async function fetchGallery() {
     const res = await fetch(`${API_URL}/gallery`);
     if (!res.ok) throw new Error('Failed to fetch gallery');
     const data = await res.json();
-    return data.images;
+    const rawList = Array.isArray(data) ? data : (data?.images || []);
+    if (rawList.length === 0) return null;
+    return rawList.map((item) => ({
+      image_url: item.image_url || item.url || item.image || '',
+      alt_text: item.alt_text || item.alt || 'Gallery photo',
+      category: item.category || 'all',
+    }));
   } catch (err) {
     console.warn('API unavailable, using fallback data:', err.message);
     return null;
